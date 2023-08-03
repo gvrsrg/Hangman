@@ -1,8 +1,10 @@
-function Letter({letter}, {style}){
+import classnames from 'classnames'
+
+function Letter(props){
 
 
     return (
-            <span class="{style}" > {letter.toUpperCase()} </span>
+            <span className={classnames(props.mods)}> {props.letter.toUpperCase()} </span>
             )
         
     

@@ -8,7 +8,7 @@ function Letters(props){
             {alphabet.map( (l) => {
                 let mods = "letter"+((props.letters.includes(l.toLowerCase()))?' checked':' unchecked' )
                 return (
-                    <Letter style={mods} letter={l} />
+                    <Letter mods={mods} letter={l} />
                 )
                 })
             }
