@@ -1,6 +1,6 @@
 import Letter from "./Letter";
 
-function Letters(props){
+function Letters({letterStatus}){
     let alphabet = [...Array(26).keys()].map(i => String.fromCharCode(i + 97));
 
     return (
