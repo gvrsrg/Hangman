@@ -44,3 +44,22 @@
 .checked {
   text-decoration: line-through;
 }
+
+.letter {
+  font-size: xx-large;
+}
+
+.high-score {
+  color: green;
+  font-size: xx-large;
+}
+
+.medium-score {
+  color: yellow;
+  font-size: xx-large;
+}
+
+.low-score {
+  color: red;
+  font-size: xx-large;
+}

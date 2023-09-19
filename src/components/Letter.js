@@ -1,10 +1,10 @@
 import classnames from 'classnames'
 
-function Letter(props){
+function Letter({mods, selectLetter, letter}){
 
 
     return (
-            <span className={classnames(props.mods)}> {props.letter.toUpperCase()} </span>
+            <span className={classnames(mods)} onClick={() => {selectLetter(letter)}}> {letter.toUpperCase()} </span>
             )
         
     

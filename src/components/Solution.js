@@ -1,13 +1,15 @@
+import Letter from "./Letter"
+
 function Solution(props){
 
-    let word = [...props.word]
-    let letters = [...props.letters]
+    let word = [...props.solution.word]
+    let letterStatus = props.letterStatus
 
     let placeholder = 
     word.map((l) =>
-        { console.log(l)
+        { 
             return (
-                (letters.includes(l)) ? l : "_"
+                (letterStatus[l.toUpperCase()]) ? l.toUpperCase() : "_"
                 )
         }
     )
@@ -15,11 +17,11 @@ function Solution(props){
     return (
         <div class="solution">
             {placeholder.map( (l) => {return (
-                <span class="letter"> {l} </span>
+                <Letter mods={"letter unchecked"} letter={l} />
             )}
             )}
             <div>
-                <em>{props.description}</em>
+                <em>{props.solution.hint}</em>
             </div>
         </div>
     )
